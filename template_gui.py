@@ -6,11 +6,16 @@ class DlgMain(QDialog):
     def __init__(self):
         super(DlgMain, self).__init__()
         self.setWindowTitle("My GUI")
-    # add more attributes and properties
+
+        self.ledTest = QLineEdit("This is QLineEdit", self)
 
 
-if __name__ == "__main__":
+def main():
     app = QApplication(sys.argv)
     dlgMain = DlgMain()
     dlgMain.show()
     sys.exit(app.exec_())
+
+
+if __name__ == "__main__":
+    main()
