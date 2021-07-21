@@ -8,6 +8,7 @@ class DlgMain(QDialog):
         self.setWindowTitle("My GUI")
 
         self.ledTest = QLineEdit("This is QLineEdit", self)
+        self.ledTest.move(50, 50)
 
 
 def main():
