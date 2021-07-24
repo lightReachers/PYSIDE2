@@ -5,7 +5,7 @@ from PySide2.QtWidgets import *
 class DlgMain(QWidget):
     def __init__(self):
         super(DlgMain, self).__init__()
-        self.setWindowTitle("MSG box")
+        self.setWindowTitle("MSG box example")
         self.resize(200, 200)
 
         self.btn = QPushButton('ShowMSG', self)
