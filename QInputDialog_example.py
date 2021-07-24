@@ -8,17 +8,16 @@ class DlgMain(QWidget):
         self.setWindowTitle("MSG box")
         self.resize(200, 200)
 
-        self.btn = QPushButton('ShowMSG', self)
+        self.btn = QPushButton('Get Text', self)
         self.btn.move(40, 40)
         self.btn.clicked.connect(self.evt_btn_clicked)
 
     def evt_btn_clicked(self):
-        res = QMessageBox.question(self, "Disk Full", "Your Disk is almost full")
-        if res == QMessageBox.Yes:
-            QMessageBox.information(self, "", "You clicked YES!!")
+        sName, bOK = QInputDialog.getText(self, "Txt", "Enter you name")
+        if bOK:
+            QMessageBox.information(self, "Name", "Your name is " + sName)
         else:
-
-            QMessageBox.information(self, "", "Tou clicked No!!")
+            QMessageBox.critical(self, "", "You cancel")
 
 
 def main():
